@@ -9,8 +9,9 @@ cards.forEach(function (card) {
         const truncatedContent = fullContent.substring(0, maxLength);
         const remainingContent = fullContent.substring(maxLength);
 
-        const truncatedHtml = `${truncatedContent}<span class="read-more" style="color: blue; cursor: pointer;">... <em>Read more</em></span>`;
-        content.innerHTML = truncatedHtml;
+        const truncatedHtml = `${truncatedContent}`;
+        const btn = `<span class="read-more" style="color: blue; cursor: pointer;">... <em>Read more</em></span>`;
+        content.innerHTML = truncatedHtml + btn;
 
         const readMoreElement = card.querySelector(".read-more");
         readMoreElement.addEventListener("click", function () {
